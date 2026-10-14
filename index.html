@@ -3,99 +3,188 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123b63">
   <title>هنرستان شهدا راه‌آهن</title>
   <style>
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: Tahoma, Arial, sans-serif;
-      background: #f3f6fa;
-      color: #243047;
-      line-height: 1.9;
+      line-height: 2;
+      color: #263449;
+      background: #f2f6fb;
     }
     header {
-      background: #123b63;
       color: white;
-      padding: 28px 16px;
       text-align: center;
+      padding: 48px 18px;
+      background: linear-gradient(135deg, #123b63, #1976a9);
     }
-    header h1 { margin: 0; font-size: 27px; }
+    header h1 { font-size: 30px; margin: 0 0 8px; }
+    header p { margin: 0; color: #e1efff; }
     nav {
       background: #0b2945;
-      padding: 12px;
+      padding: 12px 8px;
       text-align: center;
+      position: sticky;
+      top: 0;
     }
     nav a {
+      display: inline-block;
       color: white;
       text-decoration: none;
-      margin: 0 10px;
-      display: inline-block;
+      padding: 5px 10px;
+      font-size: 14px;
     }
-    main { max-width: 900px; margin: 24px auto; padding: 0 15px; }
+    nav a:hover { color: #9cdbff; }
+    main { max-width: 950px; margin: 28px auto; padding: 0 16px; }
     section {
       background: white;
-      padding: 22px;
-      margin-bottom: 18px;
-      border-radius: 14px;
-      box-shadow: 0 3px 12px #0000000c;
+      padding: 24px;
+      margin-bottom: 22px;
+      border-radius: 16px;
+      box-shadow: 0 4px 18px #19395810;
     }
-    h2 { color: #123b63; }
-    .welcome { text-align: center; padding: 32px 20px; }
+    h2 { color: #123b63; margin-top: 0; }
+    .welcome { text-align: center; padding: 36px 20px; }
+    .welcome h2 { font-size: 25px; }
     .button {
       display: inline-block;
       background: #1769aa;
       color: white;
-      padding: 8px 18px;
-      border-radius: 8px;
       text-decoration: none;
+      padding: 8px 20px;
+      border-radius: 9px;
+      margin-top: 10px;
+    }
+    .button:hover { background: #0b4d82; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 15px;
+    }
+    .card {
+      background: #f0f6fc;
+      padding: 18px;
+      border-radius: 12px;
+      border: 1px solid #dce9f5;
+    }
+    .card h3 { color: #1769aa; margin-top: 0; }
+    .number {
+      direction: ltr;
+      unicode-bidi: embed;
+      display: inline-block;
+      font-size: 21px;
+      font-weight: bold;
+      color: #123b63;
     }
     footer {
-      background: #123b63;
+      background: #0b2945;
       color: white;
       text-align: center;
-      padding: 18px;
+      padding: 22px 15px;
     }
+    footer p { margin: 4px; }
     @media (max-width: 500px) {
-      header h1 { font-size: 22px; }
-      nav a { margin: 0 5px; font-size: 13px; }
+      header h1 { font-size: 23px; }
+      nav a { padding: 4px 6px; font-size: 12px; }
+      section { padding: 18px; }
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>هنرستان شهدا راه‌آهن</h1>
-    <p>دانش، مهارت، آینده‌ای روشن</p>
+    <p>دانش، مهارت، خلاقیت و آینده‌ای روشن</p>
   </header>
+
   <nav>
-    <a href="#about">معرفی هنرستان</a>
-    <a href="#news">اخبار</a>
+    <a href="#about">درباره هنرستان</a>
+    <a href="#fields">رشته‌ها</a>
     <a href="#projects">پروژه‌ها</a>
     <a href="#contact">تماس با ما</a>
   </nav>
+
   <main>
     <section class="welcome">
-      <h2>به وب‌سایت هنرستان خوش آمدید</h2>
-      <p>محیطی برای یادگیری، خلاقیت و پرورش مهارت‌های دانش‌آموزان.</p>
-      <a class="button" href="#about">بیشتر بدانید</a>
+      <h2>به وب‌سایت هنرستان شهدا راه‌آهن خوش آمدید</h2>
+      <p>
+        اینجا دانش‌آموزان دانش فنی و مهارت‌های کاربردی را یاد می‌گیرند
+        و برای ساختن آینده‌ای بهتر آماده می‌شوند.
+      </p>
+      <a class="button" href="#about">آشنایی با هنرستان</a>
     </section>
+
     <section id="about">
       <h2>درباره هنرستان</h2>
-      <p>هنرستان شهدا راه‌آهن با هدف آموزش دانش و مهارت‌های فنی و حرفه‌ای فعالیت می‌کند.</p>
+      <p>
+        هنرستان شهدا راه‌آهن در شهرک وحدت واقع شده است.
+        این هنرستان در رشته‌های فنی و مهارتی فعالیت می‌کند
+        و فرصت یادگیری و رشد توانایی‌های دانش‌آموزان را فراهم می‌سازد.
+      </p>
     </section>
-    <section id="news">
-      <h2>اخبار و اطلاعیه‌ها</h2>
-      <p>اطلاعیه‌های جدید هنرستان در این بخش منتشر خواهد شد.</p>
+
+    <section id="fields">
+      <h2>رشته‌های تحصیلی</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>⚙️ مکانیک</h3>
+          <p>آشنایی با دانش و مهارت‌های فنی حوزه مکانیک.</p>
+        </div>
+        <div class="card">
+          <h3>📊 حسابداری</h3>
+          <p>یادگیری اصول حسابداری و امور مالی.</p>
+        </div>
+        <div class="card">
+          <h3>💻 شبکه و نرم‌افزار</h3>
+          <p>آشنایی با فناوری اطلاعات، برنامه‌نویسی و شبکه.</p>
+        </div>
+      </div>
     </section>
+
     <section id="projects">
       <h2>پروژه‌های دانش‌آموزی</h2>
-      <p>در این قسمت می‌توان پروژه‌ها و دستاوردهای دانش‌آموزان را معرفی کرد.</p>
+      <p>
+        دانش‌آموزان می‌توانند مهارت‌ها و ایده‌های خود را
+        در قالب پروژه‌های عملی ارائه کنند.
+      </p>
+      <div class="cards">
+        <div class="card">
+          <h3>📱 طراحی اپلیکیشن</h3>
+          <p>
+            طراحی و ساخت اپلیکیشن برای تلفن همراه
+            و حل مسائل با استفاده از فناوری.
+          </p>
+        </div>
+        <div class="card">
+          <h3>🌐 طراحی سایت</h3>
+          <p>
+            ساخت وب‌سایت با استفاده از HTML، CSS
+            و JavaScript و معرفی ایده‌های دانش‌آموزان.
+          </p>
+        </div>
+      </div>
     </section>
+
     <section id="contact">
-      <h2>تماس با ما</h2>
-      <p>برای ارتباط با هنرستان، اطلاعات تماس رسمی را در این بخش قرار دهید.</p>
+      <h2>تماس با هنرستان</h2>
+      <p>شماره تماس مدرسه:</p>
+      <p>
+        <a class="number" href="tel:02636649031">۰۲۶۳۶۶۴۹۰۳۱</a>
+      </p>
+      <a class="button" href="tel:02636649031">📞 تماس با مدرسه</a>
+      <p>نشانی: شهرک وحدت</p>
     </section>
   </main>
-  <footer>© هنرستان شهدا راه‌آهن</footer>
+
+  <footer>
+    <p>هنرستان شهدا راه‌آهن</p>
+    <p>آموزش امروز، مهارت فردا</p>
+    <p>© تمامی حقوق محفوظ است.</p>
+  </footer>
+
 </body>
 </html>
